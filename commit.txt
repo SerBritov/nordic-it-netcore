@@ -1,0 +1,20 @@
+commit 4b5876d70c7cad52675a81e3a5233f64197f3809 (HEAD -> main, origin/main, origin/HEAD)
+Author: asncn <asncn@mail.ru>
+Date:   Wed Apr 21 19:02:01 2021 +0300
+
+    2nd commit
+
+commit 67270e032cd4668136a1b23367ac70b4d8ebce84
+Author: asncn <asncn@mail.ru>
+Date:   Wed Apr 21 18:53:14 2021 +0300
+
+    1st test commit
+
+				_____________________________
+
+для правки истории изменений - git rebase {хэш-сумма коммита до интересующих}
+будет работа в WIM. Выход с сохранением: "shift+:" и команда
+wq -- выход с сохранением
+q! -- выход без сохранения
+i -- вход в insert mode
+ESC -- выход из insert mode
