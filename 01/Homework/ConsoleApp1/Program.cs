@@ -23,6 +23,7 @@ namespace ConsoleApp1
 				Console.WriteLine($"Здравствуйте, {name}!");
 				Thread.Sleep(5000);
 				Console.WriteLine($"До встречи, {name}!");
+				Console.ReadKey();
 				/*Если нужно приветствовать множество людей*/
 				/*Thread.Sleep(1000);
 				Console.WriteLine("Хотите еще кого-нибудь поприветствовать?y/n");
