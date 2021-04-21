@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HellowWorldApp</name>
+    </assembly>
+    <members>
+        <member name="T:HellowWorldApp.Program">
+            <summary>
+            Для публичных классов и методов
+            </summary>
+        </member>
+        <member name="M:HellowWorldApp.Program.Main(System.String[])">
+            <summary>
+            Main main main
+            </summary>
+            <param name="args">args args</param>
+        </member>
+    </members>
+</doc>
