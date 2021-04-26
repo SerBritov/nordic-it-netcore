@@ -9,10 +9,10 @@ namespace HellowWorldApp
 	 /// Main main main
 	 /// </summary>
 	 /// <param name="args">args args</param>
-	  /*
-	   * комментарии. Выделение CTRL + K, C 
-	   * Убрать комментарий CTRL + K, U
-	   */
+		/*
+         * комментарии. Выделение CTRL + K, C 
+         * Убрать комментарий CTRL + K, U
+         */
 		static void Main(string[] args)
 		{
 			Console.InputEncoding = Encoding.Unicode;   //support unicode for input
@@ -31,7 +31,7 @@ namespace HellowWorldApp
 			}
 			Console.WriteLine(a);
 			Console.ReadKey();*/
-			
+
 			/*
 			 * объявление переменных
 			 * переменные не могут начинаться с числа
@@ -66,9 +66,9 @@ namespace HellowWorldApp
 			string name = "Alice";
 			System.String name2 = "Bob";
 			Console.WriteLine(name);
-			name += letter;	//name=letter не вышло
+			name += letter; //name=letter не вышло
 			Console.WriteLine(name);
-			name += intExample;	//name = intExample не вышло
+			name += intExample; //name = intExample не вышло
 			Console.WriteLine(name);
 
 			/*
@@ -93,7 +93,7 @@ namespace HellowWorldApp
 			uint uIntExample = 65635 * 32326;   //беззнаковый инт
 			System.UInt32 uIntExample2 = uIntExample;
 			Console.WriteLine(uIntExample2);
-			long longIntValue = 846464879764564;	//8 байт
+			long longIntValue = 846464879764564;    //8 байт
 			System.Int64 lontIntValue2 = longIntValue;
 			Console.WriteLine(lontIntValue2);
 
@@ -101,7 +101,7 @@ namespace HellowWorldApp
 			 * Числа с плавающей точкой
 			 * 
 			 */
-			float floatExample=3.5F;	// 4 байта, F в конце
+			float floatExample = 3.5F;  // 4 байта, F в конце
 			System.Single floatExample2 = floatExample * 2.5F;
 			Console.WriteLine(floatExample2);
 			double d = -3.5;    //8 байт
@@ -112,8 +112,7 @@ namespace HellowWorldApp
 			Console.WriteLine();
 			Console.Write("Введите Ваш возраст: ");
 			int myAge = int.Parse(Console.ReadLine());
-
-			Console.WriteLine(myAge*2);
+			Console.WriteLine(myAge * 2);
 
 			/*
 			 * Булевые значения
@@ -122,12 +121,12 @@ namespace HellowWorldApp
 			System.Boolean b2 = !b1;    //отрицание
 										//Операторы для булевых значений
 			Console.WriteLine();
-			Console.WriteLine(3<7); //сравнение
+			Console.WriteLine(3 < 7); //сравнение
 			Console.WriteLine();
-			Console.WriteLine("asdf" == "ASDF");	//проверка равенства
+			Console.WriteLine("asdf" == "ASDF");    //проверка равенства
 			Console.WriteLine(3.14f == 3.14);   //false
 			Console.WriteLine((double)3.14f == 3.14);   //false
-			Console.WriteLine(b1 == false);	//нужно писать !b1
+			Console.WriteLine(b1 == false); //нужно писать !b1
 			Console.WriteLine(b2 == false); //!b2
 											//(b1 == true) = (b1); (b2 == true) = b2;
 			Console.WriteLine(3.14 != 3.14);    //проверка неравенства
@@ -148,14 +147,12 @@ namespace HellowWorldApp
 			 */
 			int a1 = 0b0000001; //бинарное число объявляется 0b в начале
 			int a2 = 0b0000011; //3
-			Console.WriteLine(a1|a2);   //0b00000011
+			Console.WriteLine(a1 | a2);   //0b00000011
 			/* 0b00000001; a1
 			 * 0b00000011; a2
 			 * 0b00000011; a1|a2
 			 * 0b00000010; a1&a2;
 			 */
-			
-
 		}
 	}
 }
