@@ -208,7 +208,8 @@ namespace Classwork03
 			ages[1] = 6;
 			ages[2] = 42;
 			for (int i = 0; i < trees.Length;
-				Console.WriteLine($"{trees[i]} -  возраст в годах {ages[i++]}"));
+				Console.WriteLine($"{trees[i].ToString().PadLeft(6)} -  возраст в годах {ages[i++].ToString().PadLeft(4)}"));
+
 
 
 
