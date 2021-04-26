@@ -112,7 +112,50 @@ namespace HellowWorldApp
 			Console.WriteLine();
 			Console.Write("Введите Ваш возраст: ");
 			int myAge = int.Parse(Console.ReadLine());
+
 			Console.WriteLine(myAge*2);
+
+			/*
+			 * Булевые значения
+			 */
+			bool b1 = true;
+			System.Boolean b2 = !b1;    //отрицание
+										//Операторы для булевых значений
+			Console.WriteLine();
+			Console.WriteLine(3<7); //сравнение
+			Console.WriteLine();
+			Console.WriteLine("asdf" == "ASDF");	//проверка равенства
+			Console.WriteLine(3.14f == 3.14);   //false
+			Console.WriteLine((double)3.14f == 3.14);   //false
+			Console.WriteLine(b1 == false);	//нужно писать !b1
+			Console.WriteLine(b2 == false); //!b2
+											//(b1 == true) = (b1); (b2 == true) = b2;
+			Console.WriteLine(3.14 != 3.14);    //проверка неравенства
+
+			/*
+			 * Логические операции
+			 */
+			// && - AND
+			// || - OR
+			Console.WriteLine(true || false);
+			Console.WriteLine(true && false);
+			//Логические операции выполняются по следующему приоритету ! - && - ||
+			Console.WriteLine();
+
+
+			/*
+			 * Побитовые операторы
+			 */
+			int a1 = 0b0000001; //бинарное число объявляется 0b в начале
+			int a2 = 0b0000011; //3
+			Console.WriteLine(a1|a2);   //0b00000011
+			/* 0b00000001; a1
+			 * 0b00000011; a2
+			 * 0b00000011; a1|a2
+			 * 0b00000010; a1&a2;
+			 */
+			
+
 		}
 	}
 }
