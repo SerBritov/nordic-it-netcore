@@ -16,14 +16,12 @@ namespace Homework02
             finalResult = Computing();
             if (!dividedByZero)
                 Console.WriteLine(finalResult);
-			else
+            else
                 Console.WriteLine("Don't divide by zero");
             Console.ReadKey();
 
-
             double Computing()
             {
-
                 double value1 = 0, value2 = 0;
 
             MethodStart:
@@ -39,7 +37,6 @@ namespace Homework02
                         value1 += ((double)expression[stringIndex] - 48) * Math.Pow(0.1, (stringIndex - dotIndex + 1));
                     }
                 }
-
 
                 /*
                  * low priority computations
