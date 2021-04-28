@@ -22,6 +22,7 @@ namespace Classwork04
 		{
 			//Colours pal = (Colours)(0x1FF);
 			//Console.WriteLine(pal);
+			Colours AllColours = (Colours)(0x1FF);
 			for (int i = 1; i<0x200; i*=2)
 			{
 				Console.WriteLine((Colours)i + "  " + i);
@@ -35,7 +36,8 @@ namespace Classwork04
 			favoritColours += int.Parse(Console.ReadLine());
 
 			Console.WriteLine(favoritColours);
-			Colours unFavoriteColours = (Colours)(0x1FF) ^ favoritColours;
+						
+			Colours unFavoriteColours = AllColours ^ favoritColours;
 			Console.WriteLine(unFavoriteColours);
 		}
 
