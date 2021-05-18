@@ -6,9 +6,15 @@ namespace Homework04
     enum Containers : int
     {
         None = 0,
+<<<<<<< HEAD
         small = 1<<1,   //1 litres
         medium = 1<<2,  //5 litres
         large = 1<<3    //20 litres
+=======
+        small = 1,   //1 litres
+        medium = 1<<1,  //5 litres
+        large = 1<<2    //20 litres
+>>>>>>> 49a006f63a551a32e405e224952d1b64d98c2576
     }
     
     class Program
