@@ -1,71 +1,53 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading;
 
 namespace Homework08
 {
     class Program
     {
         static void Main(string[] args)
-        {
-            Console.WriteLine("Enter your brackets");
-            string input = Console.ReadLine();
-            Dictionary<char, char> bracket = new Dictionary<char, char>()
+        { //label1:
+            string input;
+            Dictionary<char, char> brackets = new Dictionary<char, char>()
             {
-                {'(', ')' },
-                {'{', '}' },
-                {'[', ']' },
-            };
-            List<char> brackets = new List<char>();
-            brackets.AddRange(input.ToCharArray());
-            int i1, i2, otherPairBetweenIndex = 0;
-            bool hasOtherPairBetween;
-            foreach (KeyValuePair<char, char> symbol in bracket)
-                do
+                { '(', ')' },
+                { '{', '}' },
+                { '[', ']' },
+             };
+            Console.WriteLine("Enter your brackets");
+            input = Console.ReadLine();
+            string[] testInputNonEmpty = input.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+            if (testInputNonEmpty.Length < 1)
+            {
+                Console.WriteLine("Empty string");
+                return;
+            }
+
+            int initialLength;
+            do
+            {
+                initialLength = input.Length;
+                foreach (var bracketPair in brackets)
                 {
-                    if (brackets.Contains(symbol.Key))
+                    for (int i = input.IndexOf(bracketPair.Key);
+                        i > -1 && i < input.Length - 1;
+                        )
                     {
-                        i1 = brackets.IndexOf(symbol.Key);
-                        i2 = i1 + 1;
-                        hasOtherPairBetween = true;
-                        do
+                        if (input[i + 1] == bracketPair.Value && input[i] == bracketPair.Key)
                         {
-                            try
-                            {
-                                if (brackets[i2] == symbol.Value && hasOtherPairBetween)
-                                {
-                                    brackets.RemoveAt(i2);
-                                    brackets.RemoveAt(i1);
-                                    break;
-                                }
-                                else if (brackets[i2] == symbol.Key)
-                                {
-                                    i1 = i2;
-                                    otherPairBetweenIndex = i2;
-                                    hasOtherPairBetween = false;
-                                    i2++;        
-                                    continue;
-                                }
-                                i2++;
-                                if (bracket[brackets[otherPairBetweenIndex]] == brackets[i2])
-                                    hasOtherPairBetween = true;
-                            }
-                            catch
-                            {
-                                Console.WriteLine(false);
-                                Console.ReadLine();
-                                return;
-                            }
-                        } while (brackets.Contains(symbol.Key));
+                            input = input.Remove(i, 2);
+                            i = input.IndexOf(bracketPair.Key);
+                            continue;
+                        }
+                        i++;
                     }
-                    else break;
-                } while (brackets.Count > 0);
-            if (brackets.Count >0)
-            Console.WriteLine(true);
-            else
-                Console.WriteLine(false);
-            Console.ReadLine();
+                }
 
-
+            } while (initialLength != input.Length);
+            Console.WriteLine((input.Length == 0));
+            //goto label1;
         }
     }
 }
+
