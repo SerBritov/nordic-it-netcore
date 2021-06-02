@@ -16,9 +16,8 @@ namespace Homework08
                 { '[', ']' },
              };
             Console.WriteLine("Enter your brackets");
-            input = Console.ReadLine();
-            string[] testInputNonEmpty = input.Split(' ', StringSplitOptions.RemoveEmptyEntries);
-            if (testInputNonEmpty.Length < 1)
+            input = Console.ReadLine();            
+            if (string.IsNullOrWhiteSpace(input))
             {
                 Console.WriteLine("Empty string");
                 return;
