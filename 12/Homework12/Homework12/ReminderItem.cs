@@ -8,13 +8,12 @@ namespace Homework12
 {
     class ReminderItem
     {
-        public DateTimeOffset AlarmDate;
-        public string AlarmMessage;
+        public DateTimeOffset AlarmDate { get; set; }
+        public string AlarmMessage { get; set; }
         public TimeSpan TimeToAlarm
         {
             get
-            { return AlarmDate - DateTimeOffset.Now; }
-            set { }
+            { return AlarmDate - DateTimeOffset.Now; }            
         }
         public bool IsOutdated
         {
@@ -22,7 +21,6 @@ namespace Homework12
             {
                 return (TimeToAlarm < TimeSpan.FromMilliseconds(0));
             }
-            set { }
         }
 
         public ReminderItem(DateTimeOffset alarmDate, string alarmMessage)
