@@ -7,11 +7,22 @@ namespace Homework
 {
     class MultipleLogWriter : ILogWriter, IEnumerable<ILogWriter>
     {
-        private List<ILogWriter> _logWriters;
-        public MultipleLogWriter(List<ILogWriter> logWriters)
+        private static MultipleLogWriter instance;
+        private MultipleLogWriter()
         {
-            _logWriters = logWriters;
+            _logWriters = new List<ILogWriter> 
+            { 
+                ConsoleLogWriter.GetInstance(), 
+                FileLogWriter.GetInstance() 
+            };
         }
+        public static MultipleLogWriter GetInstance()
+        {
+            if (instance == null)
+                instance = new MultipleLogWriter();
+            return instance;
+        }
+        private List<ILogWriter> _logWriters;
 
         public void LogError(string message)
         {
@@ -40,6 +51,6 @@ namespace Homework
         {
             return _logWriters.GetEnumerator();
         }
-                
+
     }
 }

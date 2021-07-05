@@ -7,16 +7,26 @@ namespace Homework
 {
     public class FileLogWriter : AbstractLogWriter, ILogWriter, IDisposable
     {
-        private  FileStream fileStream;
+        private FileStream fileStream;
 
-
-        public FileLogWriter(string fileName)
+        private static FileLogWriter instance;
+        private FileLogWriter(string fileName)
         {
             fileStream = new FileStream(
                 fileName,
                 FileMode.OpenOrCreate,
                 FileAccess.ReadWrite,
                 FileShare.Read);
+        }
+        public static FileLogWriter GetInstance(string fileName)
+        {
+            if (instance == null)
+                instance = new FileLogWriter(fileName);
+            return instance;
+        }
+        public static FileLogWriter GetInstance()
+        {            
+            return instance;
         }
 
         public void Dispose()

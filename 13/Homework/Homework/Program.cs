@@ -8,14 +8,8 @@ namespace Homework
     {
         static void Main(string[] args)
         {
-            FileLogWriter fileLogWriter = new FileLogWriter(@"D:\test.txt");
-            ConsoleLogWriter consoleLogWriter = new ConsoleLogWriter();
-            MultipleLogWriter multipleLogWriter = new MultipleLogWriter(
-                new List<ILogWriter>()
-                {
-                    fileLogWriter,
-                    consoleLogWriter
-                });
+            FileLogWriter fileLogWriter = FileLogWriter.GetInstance(@"D:\test.txt");
+            MultipleLogWriter multipleLogWriter = MultipleLogWriter.GetInstance();
 
             multipleLogWriter.LogError("Message for error");
             multipleLogWriter.LogInfo("Message for info");
