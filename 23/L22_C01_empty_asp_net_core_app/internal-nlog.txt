@@ -1,0 +1,15 @@
+2020-12-23 22:01:37.9925 Info Message Template Auto Format enabled
+2020-12-23 22:01:38.5497 Info Loading assembly: NLog.Web.AspNetCore
+2020-12-23 22:01:40.3018 Info Adding target FileTarget(Name=allfile)
+2020-12-23 22:01:40.3392 Info Adding target FileTarget(Name=ownFile-web)
+2020-12-23 22:01:40.4782 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=45, FilePath=C:\Users\agolyakov\source\repos\ago-cs\cs-course-q3\Lessons\22\ClassWork\L22_C01_empty_asp_net_core_app\bin\Debug\netcoreapp3.1\nlog.config
+2020-12-23 22:12:22.5687 Info Message Template Auto Format enabled
+2020-12-23 22:12:22.6311 Info Loading assembly: NLog.Web.AspNetCore
+2020-12-23 22:12:22.8722 Info Adding target FileTarget(Name=allfile)
+2020-12-23 22:12:22.9325 Info Adding target FileTarget(Name=ownFile-web)
+2020-12-23 22:12:23.0693 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=45, FilePath=C:\Users\agolyakov\source\repos\ago-cs\cs-course-q3\Lessons\22\ClassWork\L22_C01_empty_asp_net_core_app\bin\Debug\netcoreapp3.1\nlog.config
+2020-12-23 22:14:19.2058 Info Message Template Auto Format enabled
+2020-12-23 22:14:19.5957 Info Loading assembly: NLog.Web.AspNetCore
+2020-12-23 22:14:20.2584 Info Adding target FileTarget(Name=allfile)
+2020-12-23 22:14:20.3903 Info Adding target FileTarget(Name=ownFile-web)
+2020-12-23 22:14:20.6904 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=45, FilePath=C:\Users\agolyakov\source\repos\ago-cs\cs-course-q3\Lessons\22\ClassWork\L22_C01_empty_asp_net_core_app\bin\Debug\netcoreapp3.1\nlog.config
