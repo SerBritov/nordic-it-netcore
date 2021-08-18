@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Reminder.Domain.EventArguments.AddingFailedEventArgs">
+    <Position X="1.75" Y="1.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EventArguments\AddingFailedEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Reminder.Domain.EventArguments.AddingSucceededEventArgs">
+    <Position X="1.75" Y="4" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EventArguments\AddingSucceededEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Reminder.Domain.EventArguments.ReminderItemActionEventArgs">
+    <Position X="5.25" Y="3.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAEAAAAAAAAAAAAAAAAAAAAAAEBAAAAIAAAAAA=</HashCode>
+      <FileName>EventArguments\ReminderItemActionEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Reminder.Domain.EventArguments.ReminderItemActionFailedEventArgs">
+    <Position X="5.25" Y="0.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAEAAAAAAAAAAAAAAAAAAAAAAEBAABAIAAAAAA=</HashCode>
+      <FileName>EventArguments\ReminderItemActionFailedEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Reminder.Domain.EventArguments.SendingFailedEventArgs">
+    <Position X="8.5" Y="1.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EventArguments\SendingFailedEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Reminder.Domain.EventArguments.SendingSucceededEventArgs">
+    <Position X="8.5" Y="4" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EventArguments\SendingSucceededEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
