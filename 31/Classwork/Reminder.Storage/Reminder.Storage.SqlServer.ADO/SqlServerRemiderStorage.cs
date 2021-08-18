@@ -42,7 +42,28 @@ namespace Reminder.Storage.SqlServer.ADO
 
         public ReminderItem Get(Guid id)
         {
-            throw new Exception();
+            using var sqlConnection = GetOpenedSqlConnection();
+            var cmd = sqlConnection.CreateCommand();
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.CommandText = "SELECT * FROM dbo.ReminderItem";
+            using (SqlDataReader reader = cmd.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    if (reader.GetGuid(reader.GetOrdinal("Id")) == id)
+                    {
+                        var reminderItem = new ReminderItem(
+                            id,
+                            reader.GetDateTimeOffset(reader.GetOrdinal("TargetDate")),
+                            reader.GetString(reader.GetOrdinal("Message")),
+                            reader.GetString(reader.GetOrdinal("ContactId")),
+                            (ReminderItemStatus)reader.GetByte(reader.GetOrdinal("StatusId")));
+                        return reminderItem;
+                    }                    
+                }
+                throw new Exception("Nothing found");               
+            }
+           
         }
 
         public List<ReminderItem> GetList(ReminderItemStatus status)

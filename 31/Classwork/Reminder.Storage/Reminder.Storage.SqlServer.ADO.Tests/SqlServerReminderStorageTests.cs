@@ -45,6 +45,24 @@ namespace Reminder.Storage.SqlServer.ADO.Tests
             Guid actual = storage.Add(item);
             Assert.AreNotEqual(Guid.Empty, actual);
         }
+
+        [TestMethod]
+        public void Get_Returns_ReminderItem()
+        {
+            var storage = new SqlServerReminderStorage(_connectionString);
+            var item = new ReminderItemRestricted(
+                DateTimeOffset.MinValue,
+                "message",
+                "contactId",
+                ReminderItemStatus.ReadyToSend);
+
+            Guid actualId = storage.Add(item);
+            var testedItem = storage.Get(actualId);
+            Assert.AreEqual(item.Status, testedItem.Status);
+            Assert.AreEqual(item.ContactId, testedItem.ContactId);
+            Assert.AreEqual(item.Message, testedItem.Message);
+            Assert.AreEqual(item.Date, testedItem.Date);
+        }
         public void RunSqlScript(object script)
         {
             using SqlConnection sqlConnection = GetOpenedSqlConnection();
